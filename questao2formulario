@@ -1,0 +1,162 @@
+ 1. pagina_if.html – if/else aninhado
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação com If/Else</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input, button { margin: 5px 0; display: block; }
+    </style>
+</head>
+<body>
+    <h2>Avaliação com If/Else</h2>
+    <form id="formIf">
+        Nome: <input type="text" id="nome">
+        Nota 1: <input type="number" id="nota1">
+        Nota 2: <input type="number" id="nota2">
+        Nota 3: <input type="number" id="nota3">
+        Nota 4: <input type="number" id="nota4">
+        <button type="button" onclick="avaliarIf()">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        function avaliarIf() {
+            let nome = document.getElementById('nome').value;
+            let notas = [
+                parseFloat(document.getElementById('nota1').value),
+                parseFloat(document.getElementById('nota2').value),
+                parseFloat(document.getElementById('nota3').value),
+                parseFloat(document.getElementById('nota4').value)
+            ];
+            let media = notas.reduce((a, b) => a + b, 0) / 4;
+            let situacao = "";
+
+            if (media >= 70) {
+                situacao = "Aprovado";
+            } else {
+                if (media >= 50) {
+                    situacao = "Recuperação";
+                } else {
+                    situacao = "Reprovado";
+                }
+            }
+
+            document.getElementById("resultado").innerHTML = `
+                <p><strong>Aluno:</strong> ${nome}</p>
+                <p><strong>Média:</strong> ${media.toFixed(2)}</p>
+                <p><strong>Situação:</strong> ${situacao}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
+
+
+ 2. pagina_switch.html – com switch
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação com Switch</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input, button { margin: 5px 0; display: block; }
+    </style>
+</head>
+<body>
+    <h2>Avaliação com Switch</h2>
+    <form id="formSwitch">
+        Nome: <input type="text" id="nome">
+        Nota 1: <input type="number" id="nota1">
+        Nota 2: <input type="number" id="nota2">
+        Nota 3: <input type="number" id="nota3">
+        Nota 4: <input type="number" id="nota4">
+        <button type="button" onclick="avaliarSwitch()">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        function avaliarSwitch() {
+            let nome = document.getElementById('nome').value;
+            let notas = [
+                parseFloat(document.getElementById('nota1').value),
+                parseFloat(document.getElementById('nota2').value),
+                parseFloat(document.getElementById('nota3').value),
+                parseFloat(document.getElementById('nota4').value)
+            ];
+            let media = notas.reduce((a, b) => a + b, 0) / 4;
+            let situacao = "";
+
+            switch (true) {
+                case (media >= 70):
+                    situacao = "Aprovado";
+                    break;
+                case (media >= 50):
+                    situacao = "Recuperação";
+                    break;
+                default:
+                    situacao = "Reprovado";
+            }
+
+            document.getElementById("resultado").innerHTML = `
+                <p><strong>Aluno:</strong> ${nome}</p>
+                <p><strong>Média:</strong> ${media.toFixed(2)}</p>
+                <p><strong>Situação:</strong> ${situacao}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
+
+
+3. pagina_ternario.html – com operador ternário
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação com Ternário</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input, button { margin: 5px 0; display: block; }
+    </style>
+</head>
+<body>
+    <h2>Avaliação com Operador Ternário</h2>
+    <form id="formTernario">
+        Nome: <input type="text" id="nome">
+        Nota 1: <input type="number" id="nota1">
+        Nota 2: <input type="number" id="nota2">
+        Nota 3: <input type="number" id="nota3">
+        Nota 4: <input type="number" id="nota4">
+        <button type="button" onclick="avaliarTernario()">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        function avaliarTernario() {
+            let nome = document.getElementById('nome').value;
+            let notas = [
+                parseFloat(document.getElementById('nota1').value),
+                parseFloat(document.getElementById('nota2').value),
+                parseFloat(document.getElementById('nota3').value),
+                parseFloat(document.getElementById('nota4').value)
+            ];
+            let media = notas.reduce((a, b) => a + b, 0) / 4;
+
+            let situacao = media >= 70 ? "Aprovado" :
+                           media >= 50 ? "Recuperação" :
+                           "Reprovado";
+
+            document.getElementById("resultado").innerHTML = `
+                <p><strong>Aluno:</strong> ${nome}</p>
+                <p><strong>Média:</strong> ${media.toFixed(2)}</p>
+                <p><strong>Situação:</strong> ${situacao}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
