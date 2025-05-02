@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Formulário</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+label {
+display: inline-block;
+width: 120px;
+}
+textarea {
+width: 400px;
+height: 80px;
+}
+select {
+margin-right: 10px;
+}
+.botao {
+margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<script>
+const nome = prompt("Qual seu nome?");
+if (nome) {
+document.write(`<h3>Olá, ${nome}!</h3>`);
+document.write("<p>Por favor, preencha os campos abaixo e depois clique no botão Enviar. Caso necessite apagar os dados, dê um clique no botão Limpar. Muito Obrigado!</p>");
+}
+
+document.write(`
+<form onsubmit="return validarFormulario()">
+<label>Nome Completo:</label>
+<input type="text" id="nomeCompleto" name="nomeCompleto">
+<label>Seu e-mail:</label>
+<input type="email" name="email"><br><br>
+
+<label>Sexo:</label><br>
+<input type="radio" name="sexo" value="Feminino"> Feminino<br>
+<input type="radio" name="sexo" value="Masculino"> Masculino<br><br>
+
+<label>Estado Civil:</label><br>
+<input type="radio" name="estadoCivil" value="Solteiro"> Solteiro<br>
+<input type="radio" name="estadoCivil" value="Casado"> Casado<br>
+<input type="radio" name="estadoCivil" value="Enrolado"> Enrolado<br><br>
+
+<label>Bens que possui:</label><br>
+<input type="checkbox" name="bens" value="Casa"> Casa<br>
+<input type="checkbox" name="bens" value="Automovel"> Automovel<br>
+<input type="checkbox" name="bens" value="Moto"> Moto<br><br>
+
+<label>Faixa de idade:</label>
+<select name="idade">
+<option>3 a 10 anos</option>
+<option>11 a 18 anos</option>
+<option>19 a 25 anos</option>
+<option>26 a 35 anos</option>
+<option>Acima de 35</option>
+</select>
+
+<label>Hobby preferido:</label>
+<select name="hobby">
+<option>Ler livros</option>
+<option>Ouvir música</option>
+<option>Jogar</option>
+<option>Esportes</option>
+</select><br><br>
+
+<label>Observações Gerais:</label><br>
+<textarea name="observacoes"></textarea><br><br>
+
+<button type="submit">Enviar os dados</button>
+<button type="reset">Limpar os dados</button>
+</form>
+`);
+
+function validarFormulario() {
+const nomeCompleto = document.getElementById("nomeCompleto").value;
+if (nomeCompleto.trim() === "") {
+alert("Você deve preencher o campo Nome.");
+return false;
+}
+return true;
+}
+</script>
+
+</body>
+</html>
