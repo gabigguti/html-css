@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cálculo de Salário Horista</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 30px;
+}
+label {
+display: block;
+margin-top: 10px;
+}
+input {
+width: 200px;
+padding: 5px;
+}
+button {
+margin-top: 15px;
+padding: 8px 15px;
+}
+#resultado {
+margin-top: 20px;
+padding: 15px;
+border: 1px solid #ccc;
+background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h2>Calculadora de Salário Líquido (Horista)</h2>
+
+<label>Quantidade de Horas Trabalhadas (135 a 180):</label>
+<input type="number" id="js_qht">
+
+<label>Valor da Hora Trabalhada (25 a 70):</label>
+<input type="number" id="js_vht">
+
+<label>Percentual de Desconto INSS (5 a 15):</label>
+<input type="number" id="js_inss">
+
+<label>Classificação Salarial:</label>
+<select id="classificacao">
+<option>baixo</option>
+<option>médio</option>
+<option>alto</option>
+<option>insatisfatório</option>
+</select>
+
+<button onclick="calcularSalario()">Calcular</button>
+
+<div id="resultado"></div>
+
+<script>
+function calcularSalario() {
+const qht = parseFloat(document.getElementById("js_qht").value);
+const vht = parseFloat(document.getElementById("js_vht").value);
+const inss = parseFloat(document.getElementById("js_inss").value);
+const classificacao = document.getElementById("classificacao").value;
+
+if (
+isNaN(qht) || qht < 135 || qht > 180 ||
+isNaN(vht) || vht < 25 || vht > 70 ||
+isNaN(inss) || inss < 5 || inss > 15
+) {
+alert("Verifique os valores informados! Devem estar dentro dos intervalos indicados.");
+return;
+}
+
+const salarioBruto = qht * vht;
+const descontoINSS = (salarioBruto * inss) / 100;
+const salarioLiquido = salarioBruto - descontoINSS;
+
+const status = salarioLiquido > 6000 ? "Salário Satisfatório! (maior que 6.000)" : "Salário Insatisfatório.";
+
+const resultado = `
+<h3>DEMONSTRATIVO PARA CÁLCULO DO SALÁRIO LÍQUIDO</h3>
+Quantidade de Horas Trabalhadas (135 a 180) => <strong>${qht}</strong><br>
+Valor da Hora Trabalhada (25 a 70) => <strong>${vht}</strong><br>
+Percentual de Desconto INSS (5 a 15) => <strong>${inss}%</strong><br><br>
+
+<strong>Salário BRUTO = ${salarioBruto.toFixed(2)}</strong><br>
+<strong>Total de Desconto INSS = ${descontoINSS.toFixed(2)}</strong><br>
+<strong>Salário LÍQUIDO = ${salarioLiquido.toFixed(2)} ... (${status})</strong><br>
+`;
+
+document.getElementById("resultado").innerHTML = resultado;
+}
+</script>
+
+</body>
+</html>
