@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   }
+
+   body {
+    font-size: 100%;
+     background-color: #ffffff;
+    color: #9cbb7e;
+   }
+
+  .Cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px; 
+  } 
+
+.logo {
+    font-family: Teko;
+    font-size: 32px;
+    font-weight: 600;
+    color: #9cbb7e;
+    text-transform: uppercase;}
+
+  .Cabecalho-menu {
+    display: flex;
+    gap: 32px;
+  }
+
+  .Cabecalho-menu-item {
+    font-family:"Questrial", sans-serif;
+    color: #000000;
+    font-weight: 300;    
+    font-size: 16px;
+  }
+ 
+.Conteudo-botao{
+     background-color: #9cbb7e;
+    width: 120px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    font-family: "Questrial", sans-serif;
+    font-weight: 120;
+    font-size: 16px;
+    color: #ffffff
+}
+
+  .Conteudo {
+    border-bottom: 36;
+    border-top: 0.4px solid #000000;
+  }
+
+  .Conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .Conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color:rgb(255, 255, 255) ;
+    gap: 32px;
+  }
+
+  .Conteudo-principal-escrito-titulo {
+    font-family:"Questrial", sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    color: #9cbb7e;
+  }
+
+  .Conteudo-principal-escrito-subtitulo {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #9cbb7e;
+  }
+
+  .Conteudo-principal-botao {
+    background-color: #ffffff;
+    width: 400px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    font-family: "Questrial", sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    color: #ffffff
+  }
+
+  .Conteudo-principal-botao:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+
+  .Conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; 
+    margin-top: 40px;
+    color: #ecd6c4;
+    margin-bottom: 36px;
+  }
+
+  .Conteudo-secundario-titulo {
+    border-top: 0.4px solid #ecd6c4;
+    padding-top: 24px; 
+    padding-bottom: 16px; 
+    font-family:"Questrial", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: #9cbb7e
+  }
+
+  .Conteudo-secundario-paragrafo {
+    font-family: "Sarala", serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #000000;
+  }
+
+  .rodape {
+    border-top: 0.4px solid #000000;
+    padding: 32px;
+  }
+
+  .rodape-imagem {
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+
+html{
+    font-family: "Questrial", sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;   
+}
+
+ul {
+    padding-top: 16px;
+    list-style: none;
+}
+
+.Conteudo-principal-botao {
+    background-color: #9cbb7e;
+    width: 180px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    font-family: "Sarala", serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffffff
+  }
+  
+nav {
+    max-width: 1120px;
+    margin: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Questrial", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #9cbb7e;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    color: #00000080
+}
+
+.login {
+    color: #9cbb7e;
+    font: 600;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.Conteudo {
+    background-color: #ffffff;
+}
+
