@@ -282,7 +282,6 @@ main {
 }
 
 .form-container {
-  
   max-width: 600px;
   margin: 64px auto 40px auto; /* topo, lados, base */
   display: flex;
@@ -291,8 +290,8 @@ main {
   gap: 24px;
   font-family: "Questrial", sans-serif;
   padding: 0 16px;
-
 }
+
 
 .form-titulo {
   margin-bottom: 16px;
@@ -375,3 +374,24 @@ main {
   background-color: #000000;
 }
 
+.box-contato {
+  background-color: #b4d49e;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  font-family: "Questrial", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center; /* centraliza o texto */
+}
+
+.box-contato p {
+  margin: 8px 0;
+}
+
+.box-contato strong {
+  font-weight: 700;
+}
