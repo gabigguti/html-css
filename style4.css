@@ -150,6 +150,85 @@ ul {
   text-align: center;
 }
 
+.novo-container-botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  left: 10%; /* Ajuste para a posição desejada */
+  align-items: center;
+}
+
+.container-botoes-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1120px;
+  margin: auto;
+  justify-content: center; /* Move tudo mais para a direita */
+  padding-left: 50px; /* Ajuste conforme necessário */
+}
+
+section {
+  margin-bottom: 60px; /* Ajuste conforme necessário */
+}
+
+
+.novo-container-botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.box-verde-grande {
+  flex: 2; /* Mantém ela maior na proporção */
+  background-color: #9cbb7e;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  width: 100%; /* Ocupa todo o espaço disponível */
+  max-width: 600px; /* Ajuste conforme necessário */
+  height: 400px; /* Define uma altura maior para deixá-la mais quadrada */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+
+.novo-botao-principal {
+  background-color: #9cbb7e;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  transition: opacity 0.3s ease;
+  width: 160px;
+}
+
+.novo-botao-principal:hover {
+  opacity: 0.6;
+}
+
+.novo-botao-falso {
+  background-color: #ffffff;
+  border-radius: 20px;
+  color: #9cbb7e;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 0;
+  text-align: center;
+  width: 160px;
+  border: 2px solid #9cbb7e;
+}
+
 .box-contato p {
   margin: 8px 0;
 }
@@ -193,6 +272,45 @@ ul {
   padding: 12px 16px;
   width: 300px;
 }
+.container-boxes {
+  display: flex;
+  justify-content: space-between; /* Distribui as caixas igualmente */
+  align-items: center;
+  gap: 30px; /* Espaço entre elas */
+  padding: 40px;
+  max-width: 1120px;
+  margin: auto;
+}
+
+.box-contato { 
+  flex: 1; /* Faz com que as boxes se ajustem ao espaço disponível */
+  min-height: 200px;
+  max-width: 350px;
+  text-align: center;
+}
+.box-contato-maior {
+  flex: 3;
+  max-width: 900px;
+  padding: 40px;
+  background-color: #b4d49e;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: auto; /* Centraliza na tela */
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  margin-bottom: 50px;
+}
+
+.box-contato-maior p {
+  margin: 12px 0; /* Aumenta o espaçamento entre as linhas */
+  font-size: 18px; /* Opcional: Ajusta tamanho da fonte */
+}
+
+
 
 .label-box {
   background-color: #b4d49e;
@@ -224,6 +342,16 @@ ul {
   font-weight: 500;
   text-decoration: underline;
 }
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #d4b89f; /* Tom bege/marrom claro */
+  margin: 40px auto;
+  width: 80%;
+  opacity: 0.6; /* Deixa a linha mais suave */
+}
+
 
 /* ========= CONTEÚDO E SEÇÕES ========= */
 .Conteudo {
